@@ -1,0 +1,191 @@
+nav{
+    /*background-color: #19232d;*/
+    padding: 22px 200px;
+    color: #efefef;
+    text-transform: uppercase;
+    /*box-sizing: border-box;*/
+}
+.content{ /*Crea un atributo etiqueta que mediante "class= " lo ouclta"*/
+  display: none;
+}
+.current{ /*Crea un atributo etiqueta que mediante "class= " muestra"*/
+  display: block;
+}
+.tab{ /*Crea un atributo etiqueta que mediante "class= " le da un fondo gris letra arial tamaño 12 y un espaciado..."*/
+  cursor: pointer;
+  color: Black;
+  background: #B49A0E;
+  font: bold 16px Arial;
+  padding: 18px 30px;
+  border: 4px solid Black;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+}
+.tab:hover{
+  padding: 18px 30px;
+  border: 4px solid #B00CC0;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+
+}
+.currenttab{
+  background: #FEDA18;
+  cursor: default;
+  font: bold 16px Arial;
+  padding: 18px 30px;
+  border: 4px solid #B00CC0;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+}
+
+header {  /*Cambia el estiñlo del header*/
+  text-align : center;
+  color : Black;
+  font: bold 12px Arial;
+}
+canvas{
+  border-radius: 15px;
+  border: 10px solid DarkOrange;
+  background-color: #fed8b1;
+}
+
+h3{
+  text-align : center;
+  -webkit-text-stroke: 2px black;
+  color : #E72E93; /* OliveDrab; SeaGreen; */
+  font: bold 37px Arial;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-image: url("imagenes/840_560.png");
+  background-size:cover;
+  text-align : center;
+  background-color: #F5F0EE;
+}
+p{
+  text-align : center;
+  color : Black;
+  font: bold 22px Arial;
+  margin: 25px 100px 25px 100px; /*Margen arriba, margen derecha, margen abajo. margen izquierda*/
+}
+.bot{
+  cursor: pointer;
+  width:200px;
+  height: auto;
+}
+/* -----CSS Para crear caja con texto------*/
+.box{
+  position: absolute;
+  top: 430px; /*Ajustar posicion para cada caja*/
+  left: 50%;  /*Ajustar posicion para cada caja*/
+  transform: translate(-50%,-50%);
+  width: 1200px;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #FEDA18;
+  border: 4px solid #B00CC0;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  display: flex;
+  transition: .5s
+}
+
+.box:hover{
+  box-shadow: 0 15px 30px rgba(0,0,155,.5);
+}
+.box .imgBox{
+  width: 300px;
+  flex: 0 0 150px;
+}
+.box .imgBox img{
+  max-width: 100%;
+}
+.box .contenido{
+  padding-left: 20px;
+}
+.box .contenido h2{
+  text-align: left;
+  margin: 0;
+  padding-left: 10px;
+  color: #B00CC0;
+  font: bold 30px Arial;
+}
+.box .contenido p{
+  margin: 0px;
+  padding: 10px 10px 10px;
+  text-align: justify;
+}
+/* -----CSS Para crear caja con texto------*/
+/* -----Titulo h1 neon------*/
+:root {
+  --shadow-color: purple;
+  --shadow-color-light: white;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Archivo", sans-serif;
+  background-color: #192824;
+}
+
+h1 {
+  margin: calc(50vh - 40px) auto 0 auto;
+  font-size: 60px;
+  text-transform: uppercase;
+  font-family: "Archivo Black", "Archivo", sans-serif;
+  font-weight: normal;
+  display: block;
+  height: auto;
+  text-align: center;
+}
+.juankii{
+  text-align: left;
+  align-items: center;
+}
+.albertt{
+  text-align: left;
+}
+.juan{
+  text-align: left;
+  text-indent: 100px;
+
+
+}
+.invisible{
+  color : White;
+  font: bold 22px Arial;
+  margin: 25px 100px 25px 100px;
+
+}
+.logo-1 {
+  color: White;
+  animation: neon 3s infinite;
+}
+.albertt{
+  text-indent: 100px;
+}
+
+@keyframes neon {
+  0% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+    0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+  }
+  50% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 5px var(--shadow-color-light), 0 0 15px var(--shadow-color-light), 0 0 25px var(--shadow-color-light),
+    0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 60px var(--shadow-color), 0 0 80px var(--shadow-color), 0 0 110px var(--shadow-color), 0 0 210px var(--shadow-color);
+  }
+  100% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+    0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+  }
+}
+/* -----Titulo h1 neon------*/

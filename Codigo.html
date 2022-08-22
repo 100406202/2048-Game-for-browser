@@ -1,0 +1,146 @@
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="shortcut icon" href="imagenes/tablero_inicial.png">  <!--Pone una imagen en la ventana-->
+    <script type="text/javascript" src="java.js"></script>
+    <link rel="stylesheet" href="Estilo.css">
+    <meta charset="utf-8">
+    <title>2048 teampoco</title>
+  </head>
+  <header>
+    <h1 class="logo-1" style="margin-top: 40px;margin-bottom: 20px;">
+      The yo teampoco project
+    </h1>
+    <h1 class="logo-1" style="margin-top: 40px;margin-bottom: 20px;">
+      2048
+    </h1>
+
+  </header>
+  <body>
+    <!--Navegacion entre pestañas-->
+    <nav id="main">
+      <span class="tab">Descripción del juego</span>
+      <span class="tab">Autores</span>
+      <span class="tab currenttab">Jugar</span>
+      <span class="tab">Desarrollo</span>
+      <span class="tab">Referencias</span>
+    </nav>
+    <!--Navegacion entre pestañas-->
+
+    <!--Seccion Descripción-->
+    <section class="content">
+      <div class="box" style="margin-top: 20px;">
+        <div class="imgBox">
+          <img src="imagenes/tablero_inicial.png">
+        </div>
+        <div class="contenido">
+          <h2>2048 </h2>
+          <p>2048 es un juego sencillo pero desafiante. El objetivo principal es desplazar y combinar casillas hasta obtener una casilla con el número 2048. Las casillas tienen diferentes colores y un numero en su interior multiplo de 2, y pueden sumarse 2 de ellas con el mismo número y obtener una casilla con el resultado de dicha suma. Después de cada iteración aparece una nueva casilla en un lugar vacío del tablero, que tendra valor 2 o 4, para ser combinada con el resto de casillas ya existentes.</p>
+        </div>
+      </div>
+
+      <div class="box" style="margin-top: 320px;">
+        <div class="imgBox">
+          <img src="imagenes/tablero.png">
+        </div>
+        <div class="contenido">
+          <h2>¿Cómo se juega? </h2>
+          <p>Para jugar usa las teclas de direccion (izquierda, arriba, derecha y abajo) para mover todos los bloques en esa direccion.</p>
+          <p>Cuando se inicie el juego apareceran dos casillas en lugares aleatorios del tablero y, en caso de poder sumarlas, deberas desplazarlas hacia la dirección deseada. En el ejemplo de la izquierda desplazar el tablero hacia arriba implicaria que las 2 casillas con valor 2 se combinen y formen una casilla nueva con valor 4, además de la aparición de un nuevo número en una posición vacia aleatoria.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!--Seccion Descripción-->
+
+    <!--Seccion Autores-->
+    <section class="content">
+      <div class="autor" id="juankii">
+        <h3>Juan Carlos Rodríguez Pérez</h3>
+        <audio id="audio1" src="imagenes/saludo_juan.mp4"> </audio>
+        <img  class="bot" name="image" src="imagenes/foto1.jpeg" onclick=parrafo("juan")> </a>
+        <p class="invisible" id="juan"></p>
+      </div>
+      <div class="autor" id="adrii">
+         <h3>Adrián Alcántara Blasco</h3>
+         <audio id="audio2" src="imagenes/adrian_saludo.ogg"> </audio>
+         <img  class="bot" name="image" src="imagenes/adrian.jpeg" onclick=parrafo("adrian")> </a>
+         <p class="invisible" id="adrian"></p>
+      </div>
+      <div class="autor" id="jorgee">
+        <h3>Jorge Victoria Gijón</h3>
+        <audio id="audio3" src="imagenes/jorge_saludo.ogg"> </audio>
+        <img  class="bot" name="image" src="imagenes/jorge.jpeg" onclick=parrafo("jorge")> </a>
+        <p class="invisible" id="jorge"></p>
+      </div>
+      <div class="autor" id="albertt">
+        <h3>Albert Giménez Arnal</h3>
+        <audio id="audio4" src="imagenes/saludoalbert.ogg"> </audio>
+       <img  class="bot" name="image" src="imagenes/imalbert.jpeg" onclick=parrafo("albert")> </a>
+        <p class="invisible" id="albert"></p>
+      </div>
+    </section>
+    <!--Seccion Autores-->
+
+    <!--Seccion Juego-->
+    <section class="content current">
+      <p><canvas id="canvas" width="430" height="430"></canvas></p>
+      <audio id="ganao" src="imagenes/win.wav"></audio>
+      <audio id="dos" src="imagenes/preview.mp3"></audio>
+      <audio id="tres" src="imagenes/money.wav"></audio>
+      <audio id="perder" src="imagenes/perder.wav"></audio>
+    </section>
+    <!--Seccion Juego-->
+
+    <!--Seccion Desarrollo-->
+       <section class="content">
+      <div class="box" style="margin-top: 620px;">
+        <div class="contenido">
+          <p>Para comenzar el proyecto lo primero que decidimos como equipo fue qué juego queríamos desarrollar y elegimos el 2048 ya que los cuatro miembros lo conocíamos y nos entretenía. Comenzamos haciendo el menú interactivo con las diferentes pestañas que iba a tener nuestra página y nos distribuimos de tal manera que Adrián y Jorge se encargaran de la pestaña de descripción del juego a la vez que Albert y Juan Carlos desarrollaban la pestaña de autores.</p>
+          <p>En la pestaña descripción del juego, tal como su nombre dice, explica el funcionamiento del juego. La pestaña de autores introduce a los integrantes del proyecto de manera que cuando pulsas la imagen de un integrante te explica su función en el proyecto.</p>
+            <p>Lo siguiente que nos tocaba era hacer la parte más importante del proyecto que era desarrollar el juego en sí. Lo primero que necesitábamos era crear el tablero, para ello utilizamos canvas y la función drawGrid(). Una teníamos el tablero ya podíamos ponernos con el juego, con que creamos las siguientes funciones:
+            </p>
+            <h2>createArray():</h2>
+              <p>Crea 4 arrays dentro de un array de manera que tenemos las 16 posiciones del tablero 4x4.</p>
+            <h2>drawNumbers():</h2>
+              <p>Dibuja los números dentro de los cuadros. </p>
+            <h2>generate():</h3>
+              <p>Genera un 2 o un 4 en una posición aleatoria del tablero que este vacía. </p>
+            <h2>movDow():</h2>
+              <p>Para la flecha de abajo, desplazar hacia abajo realizando las correspondientes operaciones de suma.</p>
+            <h2>movUp():</h2>
+              <p>Para la flecha de arriba, desplazar hacia arriba realizando las correspondientes operaciones de suma.</p>
+            <h2>movIz():</h2>
+              <p>Para la flecha izquierda, desplazar hacia la izquierda realizando las correspondientes operaciones de suma.</p>
+            <h2>movD():</h2>
+              <p>Para la flecha derecha, desplazar hacia la derecha realizando las correspondientes operaciones de suma.</p>
+            <h2>juego():</h2>
+              <p>juego():Llama a las funciones anteriores para dar comienzo al mismo. </p>
+            <h2>repet():</h2>
+              <p>Hace las comprobaciones correspondientes para que cuando el juego termine se llame a la función findejuego().</p>
+            <h2></h2>
+              <p>Una vez completamos el desarrollo del juego, retocamos la estética de la página, añadimos sonidos, escribimos las referencias que tomamos y llegamos al momento actual, en el que estamos escribiendo los pasos que tomamos en la pestaña de desarrollo y grabamos el video de explicación del juego. En cuanto a la planificacion del proyecto, inicialmente la idea era reunirnos de manera telemática para avanzar conjuntanmente en el desarrollo del proyecto. La realidad es que hemos ido desarrollando la página con bastante constancia, aún que tuvimos algunos problemas en la parte de la programación de la lógica del juego (movimientos de las casillas, comprobaciones de las sumas...), y por este motivo tuvimos que dedicar al proyecto un tiempo superior al que consideramos inicialmente.
+              </p>
+        </div>
+      </div>
+    </section>
+    <!--Seccion Desarrollo-->
+
+    <!--Seccion Referencias-->
+    <section class="content">
+      <div class="box">
+        <div class="imgBox">
+          <img src="imagenes/Ref_h1.png" style="margin-bottom: 12px;">
+          <img src="imagenes/w3Schools.png">
+          <img src="imagenes/YoutubeLogo.png" style="margin-top: 7px;">
+        </div>
+        <div class="contenido">
+          <p><a href="https://codepen.io/fossheim/pen/PoqKoLY">Codigo en el que esta basado el titulo de la pagina</a></p>
+          <p><a href="https://www.w3schools.com/tags/default.asp">w3Schools</a></p>
+          <p><a href="https://www.youtube.com/watch?v=RwYbpRQHZRk">Codigo en el que estan basadas las cajas de texto</a></p>
+        </div>
+      </div>
+    </section>
+    <!--Seccion Referencias-->
+
+</body>
+</html>
